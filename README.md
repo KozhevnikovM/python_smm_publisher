@@ -26,12 +26,12 @@ $ pip install -r requirements.txt
 ### Setup your credentials:
 Rename dotenv.sample to .env and specify it with your credentials
 
-VK_API_VERSION - current vk api version
-VK_APP_ID - your standalone application id. To find it, click edit on your application page
-VK_ACCESS_TOKEN - your vk access token.
-VK_LOGIN - login for user with admin group access
-TG_BOT_TOKEN - your telegram bot token
-FB_ACCESS_TOKEN - your facebook access token
+* VK_API_VERSION - current vk api version
+* VK_APP_ID - your standalone application id. To find it, click edit on your application page
+* VK_ACCESS_TOKEN - your vk access token.
+* VK_LOGIN - login for user with admin group access
+* TG_BOT_TOKEN - your telegram bot token
+* FB_ACCESS_TOKEN - your facebook access token
 
 ## How to run
 Place your photo in 'uploads/photos'

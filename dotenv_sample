@@ -1,0 +1,9 @@
+VK_API_VERSION=5.103
+VK_APP_ID=vk_standalone_application_id
+VK_ACCESS_TOKEN=vk_access_token
+VK_LOGIN=vk_login
+
+VK_OAUTH_LINK=https://oauth.vk.com/authorize?client_id=${VK_APP_ID}&redirect_uri=https://oauth.vk.com/blank.html&display=page&response_type=token&scope=photos,groups,wall,offline&v=${VK_API_VERSION}&revoke=1
+
+TG_BOT_TOKEN = telegram_bot_token
+FB_ACCESS_TOKEN=fb_access_tocken

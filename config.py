@@ -16,7 +16,7 @@ vk_auth_link = os.getenv('VK_OAUTH_LINK')
 VK_GROUP_ID = 181016321
 VK_ALBUM_ID = 262494951
 
-TG_CHANEL = '@python_auto_post'
+TG_CHANNEL = '@python_auto_post'
 
 FB_GROUP_ID = '4062480697102376'
 

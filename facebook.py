@@ -1,11 +1,14 @@
 from config import FB_ACCESS_TOKEN
 import requests
+from requests.exceptions import HTTPError
 
 API_URL = 'https://graph.facebook.com/v5.0'
 
-def check_fb_response(json):
-    if 'error' in json:
-        raise Exception(json['error'])
+
+def check_fb_response(response):
+    if not response.ok:
+        raise HTTPError(response.content)
+
 
 def fb_post_text_only(group_id, message):
     url = f'{API_URL}/{group_id}/feed'
@@ -14,7 +17,7 @@ def fb_post_text_only(group_id, message):
         'message': message
     }
     response = requests.post(url, data=data)
-    check_fb_response(response.json())
+    check_fb_response(response)
     return response.content
 
 
@@ -29,8 +32,7 @@ def fb_post(group_id, attachment=None, caption=None):
     with open(attachment, 'rb') as file:
         files = {'upload_file': file}
         response = requests.post(url, data=data, files=files)
-    print(response.json())
-    check_fb_response(response.json())
+    check_fb_response(response)
     return response.content
 
 
